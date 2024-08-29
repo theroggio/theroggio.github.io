@@ -3,7 +3,7 @@ window.addEventListener("load", async()=>{
    const ul = document.querySelector("#ul");
    
    const response = await fetch(
-       "https://github.com/theroggio/theroggio.github.io/tree/main/writing"
+      "https://api.github.com/repos/theroggio/theroggio.github.io/git/tree/main/writing?recursive=1"
    );
    if(response.ok){
        const files = await response.json();
