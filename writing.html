@@ -57,6 +57,9 @@
                               <a class="nav-link" href="index.html">Home</a>
                            </li>
                            <li class="nav-item">
+                              <a class="nav-link" href="writing.html">Writing</a>
+                           </li>
+                           <li class="nav-item">
                               <a class="nav-link" href="about.html">About</a>
                            </li>
                            <li class="nav-item active">
@@ -75,7 +78,7 @@
          <p id="p"> ?? </p>
        </div>
       <script>         
-         var fs = fs || require('fs');
+         import * as fs from 'fs';
          var files = fs.readdirSync(dir);
          var filelist = [];
          files.forEach(function(file) {
