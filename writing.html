@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Gianmarco Roggiolani: About Me</title>
+      <title>Gianmarco Roggiolani: Contact</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -45,7 +45,7 @@
                         </div>
                      </div>
                   </div>
-               </div> -->
+               </div>-->
                <div class="col-md-8 col-sm-12">
                   <nav class="navigation navbar navbar-expand-md navbar-dark ">
                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,65 +56,44 @@
                            <li class="nav-item">
                               <a class="nav-link" href="index.html">Home</a>
                            </li>
-                           <li class="nav-item active">
+                           <li class="nav-item">
                               <a class="nav-link" href="about.html">About</a>
                            </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="contact.html">Contact Us</a>
+                           <li class="nav-item active">
+                              <a class="nav-link" href="contact.html">Contact Me</a>
                            </li>
                         </ul>
                      </div>
                   </nav>
                </div>
-               <!--<div class="col-md-2">
-                  <ul class="email text_align_right">
-                     <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                     <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
-                  </ul>
-               </div>-->
             </div>
          </div>
       </div>
       <!-- end header inner -->
-      <!-- about -->
-      <div class="about">
-         <div class="container-fluid">
-            <div class="row d_flex">
-               <div class="col-md-6">
-                  <div class="titlepage text_align_left">
-                     <h2>About Me</h2>
-                     <p>Hello Visitor! <br><br>
-                        I’m Gianmarco, a passionate PhD student specializing in Robotics and AI.<br><br>
-                        I loved my journey through the world of screws, sudo rights, and bugs (way more than the one I'd like to admit) because this is one of my greatests passions.<br>
-                        <br>During my PhD I met incredible people and got the chance to visit amazing places: London, the Netherlands, Japan, California.<br>
-                        Each one of those people and places made me the person I am today, gaving me support, inspiration, satisfaction, and a lot of nice food! <br><br>
-                        However, no human can thrive walking just one path.<br>
-                        That's why I usually walk in a zig-zag of other interests: music, poetry and literature, crafting. I really struggle walking straight. 
-                        <br><br>As Einstein once said <it>"For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution." </it>
-                        <br><br>
-                        This is how this website is born, a place for me to share all the crazy and less-crazy things my mind come up with. 
-                        <br><br>
-                        In this website you will find poems, stories, thoughts that I wrote, together with information about crazy things I build and crafted, and with the nicest pieces of code I use my hands on. <br><br>
-                        One of the main reason behind why I decided to put all of it together is because we often forget that people are not straight lines, they do not have just 1-dimension.<br><br>
-                        We all are weird and complex shapes, difficult to understand and to appreciate from every angle. But it would be a shame for us to just show one of our dimensions, we are a combination of them, in every moment.
-                        <br><br>So, this is my way to really embrace who I am, quirks and all. If you don't do that, you're just hiding your unique spark.
-                        <br><br>
-                        Welcome to my world,
-                        <br>where science meets creativity, but who knows what is born from the union of them... 
-                     </p>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <!--<div class="about_img text_align_center">-->
-                     <figure><img src="images/davis.jpg" alt="#" width="48%" height="auto"/></figure>
-                     <figure><img src="images/conference.jpg" alt="#" width="48%" height="auto"/></figure>
-                     <figure><img src="images/japan.jpg" alt="#" width="80%" height="auto"/></figure>
-                  </div>
-               <!--</div>-->
-            </div>
-         </div>
-      </div>
-      <!-- end about -->
+      <!-- begin writing blog -->
+       <div class="blog">
+         <p id="p"> ?? </p>
+       </div>
+      <script>         
+         var fs = fs || require('fs');
+         var files = fs.readdirSync(dir);
+         var filelist = [];
+         files.forEach(function(file) {
+            filelist.push(file);
+            });
+         console.log(filelist[0]);
+         fs.readFile('./content/generic.md', 'utf8', (err, data) )
+         console.log(data);
+         console.log(err);
+         const para = document.createElement("p");
+         const node = document.createTextNode(data);
+         para.appendChild(node);
+         
+         const element = document.getElementById("footer");
+         const child = document.getElementById("p");
+         element.insertBefore(para, child);
+         </script>
+      <!-- end of blog -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -125,7 +104,7 @@
                         <h3>Contact Me</h3>
                         <ul class="conta">
                            <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto: gianmarco.roggiolani@gmail.com"> gianmarco.roggiolani@gmail.com </a></li>
-                       </ul>
+                        </ul>
                      </div>
                   </div>
                   <div class="col-md-8">
@@ -142,11 +121,9 @@
                         </div>
                         <div class="col-md-3">
                            <div class="infoma text_align_left">
-                              <ul class="social_icon">
-                                 <li><a href="https://www.ipb.uni-bonn.de/people/gianmarco-roggiolani/index.html"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
-                                 <li><a href="https://www.linkedin.com/in/gianmarcoroggiolani"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                                 <li><a href="https://www.instagram.com/thenewgiammi/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                              </ul>
+                              <li><a href="https://www.ipb.uni-bonn.de/people/gianmarco-roggiolani/index.html"><i class="fa fa-desktop" aria-hidden="true"></i></a></li>
+                              <li><a href="https://www.linkedin.com/in/gianmarcoroggiolani"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                              <li><a href="https://www.instagram.com/thenewgiammi/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                            </div>
                         </div>
                      </div>
