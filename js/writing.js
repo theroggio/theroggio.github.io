@@ -3,14 +3,13 @@ window.addEventListener("load", async()=>{
    const ul = document.querySelector("#ul");
    
    const url = "https://api.github.com/repos/theroggio/theroggio.github.io/contents/writing/"
-   const xhr = new XMLHttpRequest();
-   var things = xhr.open('GET', url, true);
-   console.log(things);
-   var response = things;
+   const response = await fetch(url);
+
    if(response.ok){
        const files = await response.json();
-       const html = files.tree.filter(f=>/.html$/.test(f.path));
-       html.forEach(f=>createList(f))
+       for(let i = 0; i < files.length; i++){
+            createList(files[i]);
+       }
    }
    
    function createList(file){
@@ -18,13 +17,11 @@ window.addEventListener("load", async()=>{
        li.addEventListener("click",e=>{
            li.classList.toggle("active");
        });
-       li.querySelector("span").innerText = file.path;
        fetch(file.url).then(r=>{
            if(!r.ok) return;
-           r.json().then(t=>li.querySelector("div").innerText = atob(t.content))
-       });
+           r.json().then(t=>li.querySelector("div").innerHTML = atob(t.content))
+        });
        ul.appendChild(li);
-       console.log(li);
    }
    
    });

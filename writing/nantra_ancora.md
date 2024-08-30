@@ -1,21 +1,23 @@
-## N'antra ancora
-
-Mia madre non tollera che io parli in dialetto
-
-perché quello di roma nun c'ha 'n bell'aspetto
-ma mo' che sto sfasciato sotto casa
-dopo n'antra birra tracannata
-nun posso trattené 'sta bocca mia
-che ciancia pure se er vento tutto porta via. 
-
-Perché solo in dialetto certe cose escono bene
-e fanno ride un po' de più pure 'ste mie pene,
-che a dillo in itagliano nun glie la farei
-aprì 'sto core che m'ha svotato lei. 
-
-A pensacce intensamente co' 'sti quattro stronzi attorno
-che me dicono "magna, bevi, scopa e tutto torna apposto"
-so' convinto che senza lei potrei pure stacce
-so' sopravvissuto a 'n sacco de peggio donnacce
-quinni vado avanti, pure se a fatica
-e co st'arta birra me dimentico n'amica.
+<div class="col-md-3">
+    <h2> N'antra ancora </h2>
+    <br><br>
+    Mia madre non tollera che io parli in dialetto
+    <br><br>
+    perché quello di roma nun c'ha 'n bell'aspetto<br>
+    ma mo' che sto sfasciato sotto casa<br>
+    dopo n'antra birra tracannata<br>
+    nun posso trattené 'sta bocca mia<br>
+    che ciancia pure se er vento tutto porta via. <br>
+    <br>
+    Perché solo in dialetto certe cose escono bene<br>
+    e fanno ride un po' de più pure 'ste mie pene,<br>
+    che a dillo in itagliano nun glie la farei<br>
+    aprì 'sto core che m'ha svotato lei. <br>
+    <br>
+    A pensacce intensamente co' 'sti quattro stronzi attorno<br>
+    che me dicono "magna, bevi, scopa e tutto torna apposto"<br>
+    so' convinto che senza lei potrei pure stacce<br>
+    so' sopravvissuto a 'n sacco de peggio donnacce<br>
+    quinni vado avanti, pure se a fatica<br>
+    e co st'arta birra me dimentico n'amica.<br>
+</div>
