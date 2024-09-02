@@ -301,6 +301,17 @@ button {
 
 /**-- heading section --**/
 
+.geeks {
+     width:150%;
+     height:100%;
+     background: white;
+     position: relative;
+     top:16%;
+     left:35%;
+     border-radius: 10px;
+ }
+
+
 
 /*---------------------------- preloader area ----------------------------*/
 

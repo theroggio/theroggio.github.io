@@ -2,26 +2,21 @@ window.addEventListener("load", async()=>{
    const template = document.querySelector("template").content.querySelector(".li");
    const ul = document.querySelector("#ul");
    
-   const url = "https://api.github.com/repos/theroggio/theroggio.github.io/contents/writing/"
-   const response = await fetch(url);
+   const urls = [ 
+    "https://api.github.com/repos/theroggio/theroggio.github.io/contents/writing/nantra_ancora.html",
+    "https://api.github.com/repos/theroggio/theroggio.github.io/contents/writing/il_folle.html",
+    "https://api.github.com/repos/theroggio/theroggio.github.io/contents/writing/infrangente.html",
+    "https://api.github.com/repos/theroggio/theroggio.github.io/contents/writing/lit.html",
+    "https://api.github.com/repos/theroggio/theroggio.github.io/contents/writing/mancanze_in_quarantena.html",
+   ];
 
-   if(response.ok){
-       const files = await response.json();
-       for(let i = 0; i < files.length; i++){
-            createList(files[i]);
-       }
-   }
-   
-   function createList(file){
-       const li = template.cloneNode(true);
-       li.addEventListener("click",e=>{
-           li.classList.toggle("active");
-       });
-       fetch(file.url).then(r=>{
-           if(!r.ok) return;
-           r.json().then(t=>li.querySelector("div").innerHTML = atob(t.content))
-        });
-       ul.appendChild(li);
+   for (let i = 0; i < urls.length; i++){
+    const li = template.cloneNode(true);
+    fetch(urls[i]).then(async r=>{
+       const thing = await r.text();
+       li.querySelector("div").innerHTML = thing
+    });
+    ul.appendChild(li);
    }
    
    });
